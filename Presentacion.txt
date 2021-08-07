@@ -1,0 +1,50 @@
+import Paquetededatos.Persona;
+import java.util.Scanner;
+
+//Elmer Antonio Soto Soto
+public class Holaprogra {
+    
+    public static void main(String[] args) {
+        int tamañoArreglo;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad de personas a grabar: ");
+        tamañoArreglo = sc.nextInt();
+        
+        Persona arreglopersona[] = new Persona[tamañoArreglo];
+        
+        for (int i = 0; i < tamañoArreglo; i++) {
+            
+            Persona persona = new Persona();
+            
+            System.out.println("Ingrese su Nombre: ");
+            persona.setNombres(sc.next());
+            
+            System.out.println("Ingrese su Apellido: ");
+            persona.setApellidos(sc.next());
+            
+            System.out.println("Ingrese su Fecha de Nacimiento: ");
+            persona.setFechadeNacimiento(sc.next());
+            
+            System.out.println("Ingrese su DPI: ");
+            persona.setDpi(sc.nextInt());
+            
+            System.out.println("Ingrese su Genero: ");
+            persona.setGenero(sc.next());
+            
+            System.out.println("Ingrese su Telefono: ");
+            persona.setTelefono(sc.next());
+            
+            System.out.println("Ingrese su Dirección: ");
+            persona.setDireccion(sc.next());
+            
+            arreglopersona [i] = persona;
+        }
+        
+        for (int i = 0; i < tamañoArreglo; i++) {
+            System.out.println(arreglopersona[i].getNombres() + "\t" + arreglopersona[i].getApellidos()
+                    + "\t" + arreglopersona[i].getDireccion() + "\t" + arreglopersona[i].getFechadeNacimiento() +
+                    "\t" + arreglopersona[i].getGenero() + "\t" + arreglopersona[i].getTelefono());
+        }            
+    }
+    
+}
